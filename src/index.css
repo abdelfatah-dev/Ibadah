@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Islamic Prayer Tracker Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Base colors inspired by Islamic art */
+    --background: 180 20% 98%;
+    --foreground: 160 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 15% 15%;
+
+    /* Primary - Beautiful emerald green for Islamic theme */
+    --primary: 150 60% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 150 60% 40%;
+
+    /* Secondary - Soft sky blue */
+    --secondary: 200 40% 92%;
+    --secondary-foreground: 160 15% 15%;
+
+    /* Muted tones */
+    --muted: 180 20% 95%;
+    --muted-foreground: 160 8% 50%;
+
+    /* Accent - Warm gold for achievements */
+    --accent: 45 85% 65%;
+    --accent-foreground: 160 15% 15%;
+
+    /* Prayer status colors */
+    --prayer-completed: 140 70% 50%;
+    --prayer-missed: 0 70% 60%;
+    --prayer-pending: 45 85% 65%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 20% 88%;
+    --input: 180 20% 95%;
+    --ring: 150 60% 45%;
+
+    --radius: 0.75rem;
+
+    /* Beautiful gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150 60% 45%), hsl(170 50% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 60% 85%), hsl(180 40% 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(150 60% 45%), hsl(200 60% 50%), hsl(45 85% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(180 20% 98%));
+
+    /* Prayer time gradients */
+    --gradient-fajr: linear-gradient(135deg, hsl(220 60% 30%), hsl(260 50% 40%));
+    --gradient-dhuhr: linear-gradient(135deg, hsl(45 80% 60%), hsl(35 70% 55%));
+    --gradient-asr: linear-gradient(135deg, hsl(25 70% 50%), hsl(15 60% 45%));
+    --gradient-maghrib: linear-gradient(135deg, hsl(340 70% 50%), hsl(320 60% 45%));
+    --gradient-isha: linear-gradient(135deg, hsl(240 60% 25%), hsl(220 50% 30%));
+
+    /* Shadows and effects */
+    --shadow-prayer-card: 0 4px 20px -4px hsl(150 60% 45% / 0.15);
+    --shadow-elegant: 0 10px 30px -10px hsl(150 60% 45% / 0.2);
+    --shadow-glow: 0 0 40px hsl(150 60% 45% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 180 20% 98%;
+    --sidebar-foreground: 160 15% 15%;
+    --sidebar-primary: 150 60% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 20% 95%;
+    --sidebar-accent-foreground: 160 15% 15%;
+    --sidebar-border: 180 20% 88%;
+    --sidebar-ring: 150 60% 45%;
+  }
+
+
+  
+ .dark {
+
+  /* Dark backgrounds and text */
+  --background: 160 15% 8%;
+  --foreground: 180 20% 95%;
+
+  --card: 150 25% 12%;   /* أخضر غامق */
+  --card-foreground: 0 0% 100%; /* النص أبيض */
+
+  --popover: 160 15% 10%;
+  --popover-foreground: 180 20% 95%;
+
+  --primary: 150 60% 45%;
+  --primary-foreground: 0 0% 100%;
+  --primary-hover: 150 60% 40%;
+
+  --secondary: 160 15% 15%;
+  --secondary-foreground: 180 20% 90%;   /* ✅ فاتح */
+
+  --muted: 160 15% 12%;
+  --muted-foreground: 180 10% 75%;       /* ✅ فاتح */
+
+  --accent: 45 85% 65%;
+  --accent-foreground: 0 0% 100%;        /* ✅ أبيض بدل الأسود */
+
+  --prayer-completed: 140 70% 50%;
+  --prayer-missed: 0 70% 60%;
+  --prayer-pending: 45 85% 65%;
+
+  --destructive: 0 62.8% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 160 15% 18%;
+  --input: 160 15% 15%;
+  --ring: 150 60% 45%;
+
+  --sidebar-background: 160 15% 8%;
+  --sidebar-foreground: 180 20% 95%;
+  --sidebar-primary: 150 60% 45%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 160 15% 12%;
+  --sidebar-accent-foreground: 180 20% 90%;
+  --sidebar-border: 160 15% 18%;
+  --sidebar-ring: 150 60% 45%;
+}
+
+:root {
+  --card: 0 0% 100%; /* Light mode: أبيض */
+}
+
+.dark {
+  --card: 160 15% 10%; /* Dark mode: رمادي غامق */
+}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
