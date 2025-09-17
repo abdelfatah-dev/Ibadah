@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
+# Prayer Tracker 🕌
 
-## Project info
+A modern web application to help Muslims **track daily, weekly, and monthly prayers** with progress statistics, achievements, and motivational UI.  
+The project is designed to encourage consistency and community interaction.  
 
-**URL**: https://lovable.dev/projects/c9b28bf9-d1ff-41e3-8289-07da22f0eea6
+🚀 Live Demo: [prayertracker-psi.vercel.app](https://prayertracker-psi.vercel.app/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
+- 📊 **Prayer Statistics** (daily, weekly, monthly tracking)
+- 🏆 **Achievements & Badges System**
+- 🔐 **Authentication** (login/register with JWT token)
+- 📱 **Responsive Design** (works on desktop & mobile)
+- 🌙 **Dark Mode Ready**
+- ⚡ **Fast Performance** thanks to Vite + React
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c9b28bf9-d1ff-41e3-8289-07da22f0eea6) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
+- **React 18** – component-based UI  
+- **Vite** – lightning-fast build tool  
+- **TypeScript** – static typing and better developer experience  
+- **Tailwind CSS** – utility-first responsive styling  
+- **shadcn/ui** – modern, accessible UI components  
+- **Lucide Icons** – clean SVG icon set  
+- **Recharts** – charts & graphs for prayer statistics  
+- **React Router DOM** – navigation and protected routes  
+- **Context API / Hooks** – state management  
 
-**Use your preferred IDE**
+### Backend (Optional / API Integration)
+- **Django Rest Framework (DRF)** – API for prayers, users, badges  
+- **JWT Authentication** – secure login & token-based authentication  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Deployment & Tools
+- **Vercel** – frontend hosting & CI/CD  
+- **Git & GitHub** – version control and collaboration  
+- **.env Environment Variables** – API base URL and secrets  
+- **Node.js + npm** – package management and development  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## ⚙️ Getting Started (Local Development)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18+ recommended)  
+- [npm](https://www.npmjs.com/) (comes with Node.js)  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/abdelfatah-dev/PrayerTracker.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+2. **Navigate to the project folder**
+    cd PrayerTracker
 
-**Edit a file directly in GitHub**
+3. **Install dependencies**
+    npm install
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+4. **Start the development server**
+    Start the development server
+    Open http://localhost:5173 in your browser.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Deployment
 
-## What technologies are used for this project?
+The project is deployed on Vercel.
 
-This project is built with:
+Every push to main branch automatically triggers a new deployment.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Live URL: prayertracker-psi.vercel.app
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/c9b28bf9-d1ff-41e3-8289-07da22f0eea6) and click on Share -> Publish.
+## 📌 Notes
 
-## Can I connect a custom domain to my Lovable project?
+node_modules/ and build artifacts are excluded via .gitignore.
 
-Yes, you can!
+API requests are configured inside src/services/api.ts.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Make sure to update the BASE_URL in api.ts with your backend server address.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+You can connect a custom domain via Vercel settings.
+
+
+📸 Preview
+
+![App Screenshot](public/web.jpg)
+
+
+✍️ Developed with ❤️ by Abdelfatah
