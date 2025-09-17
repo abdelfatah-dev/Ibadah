@@ -87,7 +87,7 @@ You can connect a custom domain via Vercel settings.
 
 📸 Preview
 
-![App Screenshot](public/web.jpg)
+![App Screenshot](public/Theweb.jpg)
 
 
 ✍️ Developed with ❤️ by Abdelfatah
