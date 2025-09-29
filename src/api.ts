@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // src/services/api.ts
-export const BASE_URL = "http://192.168.1.9:8000/api";
+export const BASE_URL = "https://api.ibadah.xyz/api";
 
 // ========== AUTH ========== //
 export async function login(username: string, password: string) {
@@ -19,16 +19,16 @@ export async function login(username: string, password: string) {
 }
 
 export async function register(
-  username: string,
-  password: string,
   first_name: string,
   last_name: string,
-  phone: string
+  phone: string,
+  username: string,
+  password: string
 ) {
   const res = await fetch(`${BASE_URL}/auth/register/`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password, first_name, last_name, phone }),
+    body: JSON.stringify({ first_name, last_name, phone, username, password }),
   });
 
   if (!res.ok) {

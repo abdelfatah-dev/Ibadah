@@ -17,28 +17,29 @@ export const Auth = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setError("");
 
-    try {
-      if (isLogin) {
-        const data = await login(username, password);
-        localStorage.setItem("access", data.access);
-        localStorage.setItem("refresh", data.refresh);
-        localStorage.setItem("username", username);
-        localStorage.setItem("userId", data.user.id);
-        alert("Login successful ✅");
-        navigate("/dashboard");
-      } else {
-        await register(firstName, lastName, phone, username, password);
-        alert("Account created ✅, now please log in.");
-        setIsLogin(true);
-      }
-    } catch (err: any) {
-      setError(err.message);
+  try {
+    if (isLogin) {
+      const data = await login(username, password);
+      localStorage.setItem("access", data.access);
+      localStorage.setItem("refresh", data.refresh);
+      localStorage.setItem("username", username);
+      localStorage.setItem("userId", data.user.id);
+      alert("Login successful ✅");
+      navigate("/dashboard");
+    } else {
+      // send correct data
+      await register(firstName, lastName, phone, username, password);
+      alert("Account created ✅, now please log in.");
+      setIsLogin(true);
     }
-  };
+  } catch (err: any) {
+    setError(err.message);
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
@@ -66,7 +67,7 @@ export const Auth = () => {
                   <Input
                     type="text"
                     placeholder="First Name"
-                    name="first-name"
+                    name="first_name"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     required
@@ -74,7 +75,7 @@ export const Auth = () => {
                   <Input
                     type="text"
                     placeholder="Last Name"
-                    name="last-name"
+                    name="last_name"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     required
